@@ -70,57 +70,84 @@ gameSpace.addEventListener('click', function(e) {
 //add event listeners for each variable so when they are clicked their color changes
 a3.addEventListener('click', function(e) {
   e.preventDefault();
-  a3.style.background = currentColor.color; //change background color to current players color
-  playCount++; //increment play count
-  checkWinner(); //check to see if there is a winner
+  if (a3.dataset.click === 'false') {
+    a3.style.background = currentColor.color; //change background color to current players color
+    playCount++; //increment play count
+    checkWinner(); //check to see if there is a winner
+    a3.dataset.click = 'true';
+  }
 });
 a2.addEventListener('click', function(e) {
   e.preventDefault();
-  a2.style.background = currentColor.color;
-  playCount++;
-  checkWinner();
+  if (a2.dataset.click === 'false') {
+    a2.style.background = currentColor.color;
+    playCount++;
+    checkWinner();
+    a2.dataset.click = 'true';
+  }
 });
 a1.addEventListener('click', function(e) {
   e.preventDefault();
-  a1.style.background = currentColor.color;
-  playCount++;
-  checkWinner();
+  if (a1.dataset.click === 'false') {
+    a1.style.background = currentColor.color;
+    playCount++;
+    checkWinner();
+    a1.dataset.click = 'true';
+  }
 });
 b3.addEventListener('click', function(e) {
   e.preventDefault();
-  b3.style.background = currentColor.color;
-  playCount++;
-  checkWinner();
+  if (b3.dataset.click === 'false') {
+    b3.style.background = currentColor.color;
+    playCount++;
+    checkWinner();
+    b3.dataset.click = 'true';
+  }
 });
 b2.addEventListener('click', function(e) {
   e.preventDefault();
-  b2.style.background = currentColor.color;
-  playCount++;
-  checkWinner();
+  if (b2.dataset.click === 'false') {
+    b2.style.background = currentColor.color;
+    playCount++;
+    checkWinner();
+    b2.dataset.click = 'true';
+  }
 });
 b1.addEventListener('click', function(e) {
   e.preventDefault();
-  b1.style.background = currentColor.color;
-  playCount++;
-  checkWinner();
+  if (b1.dataset.click === 'false') {
+    b1.style.background = currentColor.color;
+    playCount++;
+    checkWinner();
+    b1.dataset.click = 'true';
+  }
 });
 c3.addEventListener('click', function(e) {
   e.preventDefault();
-  c3.style.background = currentColor.color;
-  playCount++;
-  checkWinner();
+  if (c3.dataset.click === 'false') {
+    c3.style.background = currentColor.color;
+    playCount++;
+    checkWinner();
+    c3.dataset.click = 'true';
+  }
 });
 c2.addEventListener('click', function(e) {
   e.preventDefault();
-  c2.style.background = currentColor.color;
-  playCount++;
-  checkWinner();
+  if (c2.dataset.click === 'false') {
+    c2.style.background = currentColor.color;
+    playCount++;
+    checkWinner();
+    c2.dataset.click = 'true';
+  }
 });
 c1.addEventListener('click', function(e) {
   e.preventDefault();
-  c1.style.background = currentColor.color;
-  playCount++;
-  checkWinner();
+  if (c1.dataset.click === 'false') {
+    c1.style.background = currentColor.color;
+    playCount++;
+    checkWinner();
+    c1.dataset.click = 'true';
+  }
 });
 
 /**
