@@ -18,6 +18,30 @@ const c1 = document.querySelector('#c1');
 //get div for gameSpace
 const gameSpace = document.querySelector('.game-page-box');
 const gameStatusText = document.querySelector('.game-text');
+const turn = document.querySelector('.turns');
+//get submit button
+const reset = document.querySelector('#submit');
+
+reset.addEventListener('click', function(e) {
+  a3.style.background = 'whitesmoke';
+  a2.style.background = 'white';
+  a1.style.background = 'whitesmoke';
+  c3.style.background = 'whitesmoke';
+  c2.style.background = 'white';
+  c1.style.background = 'whitesmoke';
+  b3.style.background = 'white';
+  b2.style.background = 'whitesmoke';
+  b1.style.background = 'white';
+  a3.dataset.click = 'false';
+  a2.dataset.click = 'false';
+  a1.dataset.click = 'false';
+  b3.dataset.click = 'false';
+  b2.dataset.click = 'false';
+  b1.dataset.click = 'false';
+  c3.dataset.click = 'false';
+  c2.dataset.click = 'false';
+  c1.dataset.click = 'false';
+});
 
 /**
  * Class color creates a new color
@@ -65,6 +89,7 @@ let playCount = 0;
 gameSpace.addEventListener('click', function(e) {
   currentColor.switchColor();
   currentColor.switchPlayer();
+  turn.innerHTML = `Player ${currentColor.player} Go!`;
 });
 
 //add event listeners for each variable so when they are clicked their color changes
@@ -154,6 +179,9 @@ c1.addEventListener('click', function(e) {
  * Winning conditions
  */
 
+let playerOneWins = 0;
+let playerTwoWins = 0;
+
 checkWinner = () => {
   //check winner only if at least 5 plays have been made
   if (playCount >= 5) {
@@ -162,9 +190,13 @@ checkWinner = () => {
      */
     if (a3.style.background === b3.style.background && b3.style.background === c3.style.background) {
       if (a3.style.background === 'red' && b3.style.background === 'red' && c3.style.background === 'red') {
-        console.log('PLAYER 1 WINS');
+        gameStatusText.innerText = 'Player One Wins!';
+        playerOneWins++;
+        console.log(`Player One Score: ${playerOneWins}`);
       } else if (a3.style.background === 'blue' && b3.style.background === 'blue' && c3.style.background === 'blue') {
-        console.log('PLAYER 2 WINS');
+        gameStatusText.innerText = 'Player Two Wins!';
+        playerTwoWins++;
+        console.log(`Player Two Score: ${playerTwoWins}`);
       }
     }
 
@@ -173,9 +205,13 @@ checkWinner = () => {
      */
     if (a2.style.background === b2.style.background && b2.style.background === c2.style.background) {
       if (a2.style.background === 'red' && b2.style.background === 'red' && c2.style.background === 'red') {
-        console.log('PLAYER 1 WINS');
+        gameStatusText.innerText = 'Player One Wins!';
+        playerOneWins++;
+        console.log(`Player One Score: ${playerOneWins}`);
       } else if (a2.style.background === 'blue' && b2.style.background === 'blue' && c2.style.background === 'blue') {
-        console.log('PLAYER 2 WINS');
+        gameStatusText.innerText = 'Player Two Wins!';
+        playerTwoWins++;
+        console.log(`Player Two Score: ${playerTwoWins}`);
       }
     }
 
@@ -184,9 +220,13 @@ checkWinner = () => {
      */
     if (a1.style.background === b1.style.background && b1.style.background === c1.style.background) {
       if (a1.style.background === 'red' && b1.style.background === 'red' && c1.style.background === 'red') {
-        console.log('PLAYER 1 WINS');
+        gameStatusText.innerText = 'Player One Wins!';
+        playerOneWins++;
+        console.log(`Player One Score: ${playerOneWins}`);
       } else if (a1.style.background === 'blue' && b1.style.background === 'blue' && c1.style.background === 'blue') {
-        console.log('PLAYER 2 WINS');
+        gameStatusText.innerText = 'Player Two Wins!';
+        playerTwoWins++;
+        console.log(`Player Two Score: ${playerTwoWins}`);
       }
     }
     /*****************************
@@ -195,9 +235,13 @@ checkWinner = () => {
 
     if (a3.style.background === a2.style.background && a2.style.background === a1.style.background) {
       if (a3.style.background === 'red' && a2.style.background === 'red' && a1.style.background === 'red') {
-        console.log('PLAYER 1 WINS');
+        gameStatusText.innerText = 'Player One Wins!';
+        playerOneWins++;
+        console.log(`Player One Score: ${playerOneWins}`);
       } else if (a3.style.background === 'blue' && a2.style.background === 'blue' && a1.style.background === 'blue') {
-        console.log('PLAYER 2 WINS');
+        gameStatusText.innerText = 'Player Two Wins!';
+        playerTwoWins++;
+        console.log(`Player Two Score: ${playerTwoWins}`);
       }
     }
 
@@ -206,9 +250,13 @@ checkWinner = () => {
      */
     if (b3.style.background === b2.style.background && b2.style.background === b1.style.background) {
       if (b3.style.background === 'red' && b2.style.background === 'red' && b1.style.background === 'red') {
-        console.log('PLAYER 1 WINS');
+        gameStatusText.innerText = 'Player One Wins!';
+        playerOneWins++;
+        console.log(`Player One Score: ${playerOneWins}`);
       } else if (b3.style.background === 'blue' && b2.style.background === 'blue' && b1.style.background === 'blue') {
-        console.log('PLAYER 2 WINS');
+        gameStatusText.innerText = 'Player Two Wins!';
+        playerTwoWins++;
+        console.log(`Player Two Score: ${playerTwoWins}`);
       }
     }
 
@@ -218,9 +266,13 @@ checkWinner = () => {
     if (c3.style.background === c2.style.background && c2.style.background === c1.style.background) {
       console.log('straight down c3 c2 c1');
       if (c3.style.background === 'red' && c2.style.background === 'red' && c1.style.background === 'red') {
-        console.log('PLAYER 1 WINS');
+        gameStatusText.innerText = 'Player One Wins!';
+        playerOneWins++;
+        console.log(`Player One Score: ${playerOneWins}`);
       } else if (c3.style.background === 'blue' && c2.style.background === 'blue' && c1.style.background === 'blue') {
-        console.log('PLAYER 2 WINS');
+        gameStatusText.innerText = 'Player Two Wins!';
+        playerTwoWins++;
+        console.log(`Player Two Score: ${playerTwoWins}`);
       }
     }
 
@@ -230,9 +282,13 @@ checkWinner = () => {
     if (a3.style.background === b2.style.background && b2.style.background === c1.style.background) {
       console.log('diagonals a3, b2, c1');
       if (a3.style.background === 'red' && b2.style.background === 'red' && c1.style.background === 'red') {
-        console.log('PLAYER 1 WINS');
+        gameStatusText.innerText = 'Player One Wins!';
+        playerOneWins++;
+        console.log(`Player One Score: ${playerOneWins}`);
       } else if (a3.style.background === 'blue' && b2.style.background === 'blue' && c1.style.background === 'blue') {
-        console.log('PLAYER 2 WINS');
+        gameStatusText.innerText = 'Player Two Wins!';
+        playerTwoWins++;
+        console.log(`Player Two Score: ${playerTwoWins}`);
       }
     }
 
@@ -242,9 +298,13 @@ checkWinner = () => {
     if (c3.style.background === b2.style.background && b2.style.background === a1.style.background) {
       console.log('diagonals c3, b2, a1');
       if (c3.style.background === 'red' && b2.style.background === 'red' && a1.style.background === 'red') {
-        console.log('PLAYER 1 WINS');
+        gameStatusText.innerText = 'Player One Wins!';
+        playerOneWins++;
+        console.log(`Player One Score: ${playerOneWins}`);
       } else if (c3.style.background === 'blue' && b2.style.background === 'blue' && a1.style.background === 'blue') {
-        console.log('PLAYER 2 WINS');
+        gameStatusText.innerText = 'Player Two Wins!';
+        playerTwoWins++;
+        console.log(`Player Two Score: ${playerTwoWins}`);
       }
     }
   }
