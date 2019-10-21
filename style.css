@@ -25,26 +25,38 @@ body{
 
 #a3{
     background: null;
+    cursor: pointer;
 }
 #a2{
     background: null;
+    cursor: pointer;
 }
 #a1{
     background: null;
+    cursor: pointer;
 }
 #b3{
     background: null;
+    cursor: pointer;
 }
 #b2{
     background: null;
+    cursor: pointer;
 }
 #b1{
     background: null;
+    cursor: pointer;
 }
-#b1{
+#c3{
     background: null;
+    cursor: pointer;
+}
+#c2{
+    background: null;
+    cursor: pointer;
 }
 #c1{
     background: null;
+    cursor: pointer;
 }
 
