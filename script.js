@@ -190,6 +190,11 @@ checkWinner = () => {
      */
     if (c3.style.background === c2.style.background && c2.style.background === c1.style.background) {
       console.log('straight down c3 c2 c1');
+      if (c3.style.background === 'red' && c2.style.background === 'red' && c1.style.background === 'red') {
+        console.log('PLAYER 1 WINS');
+      } else if (c3.style.background === 'blue' && c2.style.background === 'blue' && c1.style.background === 'blue') {
+        console.log('PLAYER 2 WINS');
+      }
     }
 
     /*****************************
@@ -197,6 +202,11 @@ checkWinner = () => {
      */
     if (a3.style.background === b2.style.background && b2.style.background === c1.style.background) {
       console.log('diagonals a3, b2, c1');
+      if (a3.style.background === 'red' && b2.style.background === 'red' && c1.style.background === 'red') {
+        console.log('PLAYER 1 WINS');
+      } else if (a3.style.background === 'blue' && b2.style.background === 'blue' && c1.style.background === 'blue') {
+        console.log('PLAYER 2 WINS');
+      }
     }
 
     /*****************************
@@ -204,6 +214,11 @@ checkWinner = () => {
      */
     if (c3.style.background === b2.style.background && b2.style.background === a1.style.background) {
       console.log('diagonals c3, b2, a1');
+      if (c3.style.background === 'red' && b2.style.background === 'red' && a1.style.background === 'red') {
+        console.log('PLAYER 1 WINS');
+      } else if (c3.style.background === 'blue' && b2.style.background === 'blue' && a1.style.background === 'blue') {
+        console.log('PLAYER 2 WINS');
+      }
     }
   }
 };
