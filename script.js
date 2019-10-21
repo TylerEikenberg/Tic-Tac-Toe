@@ -23,6 +23,7 @@ const turn = document.querySelector('.turns');
 const reset = document.querySelector('#submit');
 
 reset.addEventListener('click', function(e) {
+  gameStatusText.innerText = 'Tic Tac Toe';
   a3.style.background = 'whitesmoke';
   a2.style.background = 'white';
   a1.style.background = 'whitesmoke';
@@ -57,19 +58,15 @@ class Color {
   switchColor() {
     if (this.color === 'red') {
       this.color = 'blue';
-      console.log(this.color);
     } else if (this.color === 'blue') {
       this.color = 'red';
-      console.log(this.color);
     }
   }
   switchPlayer() {
     if (this.player === 'One') {
       this.player = 'Two';
-      console.log(this.player);
     } else if (this.player === 'Two') {
       this.player = 'One';
-      console.log(this.player);
     }
   }
 }
@@ -181,6 +178,8 @@ c1.addEventListener('click', function(e) {
 
 let playerOneWins = 0;
 let playerTwoWins = 0;
+let playerOneWinLog = document.querySelector('#playerOneScore');
+let playerTwoWinLog = document.querySelector('#playerTwoScore');
 
 checkWinner = () => {
   //check winner only if at least 5 plays have been made
@@ -192,11 +191,11 @@ checkWinner = () => {
       if (a3.style.background === 'red' && b3.style.background === 'red' && c3.style.background === 'red') {
         gameStatusText.innerText = 'Player One Wins!';
         playerOneWins++;
-        console.log(`Player One Score: ${playerOneWins}`);
+        playerOneWinLog.innerText = `Player One Score: ${playerOneWins}`;
       } else if (a3.style.background === 'blue' && b3.style.background === 'blue' && c3.style.background === 'blue') {
         gameStatusText.innerText = 'Player Two Wins!';
         playerTwoWins++;
-        console.log(`Player Two Score: ${playerTwoWins}`);
+        playerTwoWinLog.innerText = `Player Two Score: ${playerTwoWins}`;
       }
     }
 
@@ -207,11 +206,11 @@ checkWinner = () => {
       if (a2.style.background === 'red' && b2.style.background === 'red' && c2.style.background === 'red') {
         gameStatusText.innerText = 'Player One Wins!';
         playerOneWins++;
-        console.log(`Player One Score: ${playerOneWins}`);
+        playerOneWinLog.innerText = `Player One Score: ${playerOneWins}`;
       } else if (a2.style.background === 'blue' && b2.style.background === 'blue' && c2.style.background === 'blue') {
         gameStatusText.innerText = 'Player Two Wins!';
         playerTwoWins++;
-        console.log(`Player Two Score: ${playerTwoWins}`);
+        playerTwoWinLog.innerText = `Player Two Score: ${playerTwoWins}`;
       }
     }
 
@@ -222,11 +221,11 @@ checkWinner = () => {
       if (a1.style.background === 'red' && b1.style.background === 'red' && c1.style.background === 'red') {
         gameStatusText.innerText = 'Player One Wins!';
         playerOneWins++;
-        console.log(`Player One Score: ${playerOneWins}`);
+        playerOneWinLog.innerText = `Player One Score: ${playerOneWins}`;
       } else if (a1.style.background === 'blue' && b1.style.background === 'blue' && c1.style.background === 'blue') {
         gameStatusText.innerText = 'Player Two Wins!';
         playerTwoWins++;
-        console.log(`Player Two Score: ${playerTwoWins}`);
+        playerTwoWinLog.innerText = `Player Two Score: ${playerTwoWins}`;
       }
     }
     /*****************************
@@ -237,11 +236,11 @@ checkWinner = () => {
       if (a3.style.background === 'red' && a2.style.background === 'red' && a1.style.background === 'red') {
         gameStatusText.innerText = 'Player One Wins!';
         playerOneWins++;
-        console.log(`Player One Score: ${playerOneWins}`);
+        playerOneWinLog.innerText = `Player One Score: ${playerOneWins}`;
       } else if (a3.style.background === 'blue' && a2.style.background === 'blue' && a1.style.background === 'blue') {
         gameStatusText.innerText = 'Player Two Wins!';
         playerTwoWins++;
-        console.log(`Player Two Score: ${playerTwoWins}`);
+        playerTwoWinLog.innerText = `Player Two Score: ${playerTwoWins}`;
       }
     }
 
@@ -252,11 +251,11 @@ checkWinner = () => {
       if (b3.style.background === 'red' && b2.style.background === 'red' && b1.style.background === 'red') {
         gameStatusText.innerText = 'Player One Wins!';
         playerOneWins++;
-        console.log(`Player One Score: ${playerOneWins}`);
+        playerOneWinLog.innerText = `Player One Score: ${playerOneWins}`;
       } else if (b3.style.background === 'blue' && b2.style.background === 'blue' && b1.style.background === 'blue') {
         gameStatusText.innerText = 'Player Two Wins!';
         playerTwoWins++;
-        console.log(`Player Two Score: ${playerTwoWins}`);
+        playerTwoWinLog.innerText = `Player Two Score: ${playerTwoWins}`;
       }
     }
 
@@ -268,11 +267,11 @@ checkWinner = () => {
       if (c3.style.background === 'red' && c2.style.background === 'red' && c1.style.background === 'red') {
         gameStatusText.innerText = 'Player One Wins!';
         playerOneWins++;
-        console.log(`Player One Score: ${playerOneWins}`);
+        playerOneWinLog.innerText = `Player One Score: ${playerOneWins}`;
       } else if (c3.style.background === 'blue' && c2.style.background === 'blue' && c1.style.background === 'blue') {
         gameStatusText.innerText = 'Player Two Wins!';
         playerTwoWins++;
-        console.log(`Player Two Score: ${playerTwoWins}`);
+        playerTwoWinLog.innerText = `Player Two Score: ${playerTwoWins}`;
       }
     }
 
@@ -284,11 +283,11 @@ checkWinner = () => {
       if (a3.style.background === 'red' && b2.style.background === 'red' && c1.style.background === 'red') {
         gameStatusText.innerText = 'Player One Wins!';
         playerOneWins++;
-        console.log(`Player One Score: ${playerOneWins}`);
+        playerOneWinLog.innerText = `Player One Score: ${playerOneWins}`;
       } else if (a3.style.background === 'blue' && b2.style.background === 'blue' && c1.style.background === 'blue') {
         gameStatusText.innerText = 'Player Two Wins!';
         playerTwoWins++;
-        console.log(`Player Two Score: ${playerTwoWins}`);
+        playerTwoWinLog.innerText = `Player Two Score: ${playerTwoWins}`;
       }
     }
 
@@ -300,14 +299,15 @@ checkWinner = () => {
       if (c3.style.background === 'red' && b2.style.background === 'red' && a1.style.background === 'red') {
         gameStatusText.innerText = 'Player One Wins!';
         playerOneWins++;
-        console.log(`Player One Score: ${playerOneWins}`);
+        playerOneWinLog.innerText = `Player One Score: ${playerOneWins}`;
       } else if (c3.style.background === 'blue' && b2.style.background === 'blue' && a1.style.background === 'blue') {
         gameStatusText.innerText = 'Player Two Wins!';
         playerTwoWins++;
-        console.log(`Player Two Score: ${playerTwoWins}`);
+        playerTwoWinLog.innerText = `Player Two Score: ${playerTwoWins}`;
       }
     }
-  } else if (playCount === 9) {
-    gameStatusText.innerText = 'Tie!';
+  }
+  if (playCount === 9) {
+    gameStatusText.innerText = 'Tie';
   }
 };

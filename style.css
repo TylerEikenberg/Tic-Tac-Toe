@@ -26,6 +26,12 @@ body{
     text-align: center;
     padding-top: 100px;
 }
+.text-boxes{
+    position: absolute;
+    margin-left: -25%;
+    margin-bottom: 5%;
+    font-size: 14px;
+}
 
 #a3{
     cursor: pointer;
