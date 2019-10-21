@@ -17,6 +17,7 @@ const b1 = document.querySelector('#b1');
 const c1 = document.querySelector('#c1');
 //get div for gameSpace
 const gameSpace = document.querySelector('.game-page-box');
+const gameStatusText = document.querySelector('.game-text');
 
 /**
  * Class color creates a new color
@@ -62,36 +63,68 @@ gameSpace.addEventListener('click', function(e) {
 a3.addEventListener('click', function(e) {
   e.preventDefault();
   a3.style.background = currentColor.color;
+  checkWinner();
 });
 a2.addEventListener('click', function(e) {
   e.preventDefault();
   a2.style.background = currentColor.color;
+  checkWinner();
 });
 a1.addEventListener('click', function(e) {
   e.preventDefault();
   a1.style.background = currentColor.color;
+  checkWinner();
 });
 b3.addEventListener('click', function(e) {
   e.preventDefault();
   b3.style.background = currentColor.color;
+  checkWinner();
 });
 b2.addEventListener('click', function(e) {
   e.preventDefault();
   b2.style.background = currentColor.color;
+  checkWinner();
 });
 b1.addEventListener('click', function(e) {
   e.preventDefault();
   b1.style.background = currentColor.color;
+  checkWinner();
 });
 c3.addEventListener('click', function(e) {
   e.preventDefault();
   c3.style.background = currentColor.color;
+  checkWinner();
 });
 c2.addEventListener('click', function(e) {
   e.preventDefault();
   c2.style.background = currentColor.color;
+  checkWinner();
 });
 c1.addEventListener('click', function(e) {
   e.preventDefault();
   c1.style.background = currentColor.color;
+  checkWinner();
 });
+
+/**
+ * Winning conditions
+ */
+
+checkWinner = () => {
+  //straight across a3, b3, c3
+  if (a3.style.background === b3.style.background && b3.style.background === c3.style.background) {
+    console.log('straight across a3, b3, c3');
+  }
+  //straight across a2, b2, c2
+  if (a2.style.background === b2.style.background && b2.style.background === c2.style.background) {
+    console.log('straight across a2, b2, c2');
+  }
+  //straight across a1, b1, c1
+  if (a1.style.background === b1.style.background && b1.style.background === c1.style.background) {
+    console.log('straight across a1, b1, c1');
+  }
+  //straight down a3, a2, a1
+  if (a3.style.background === a2.style.background && a2.style.background === a1.style.background) {
+    console.log('straight down a3 a2 a1');
+  }
+};

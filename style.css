@@ -9,6 +9,10 @@ body{
     margin-right: 30%;
 }
 
+.board-top{
+    text-align: center;
+}
+
 .game-page-box{
     display: inline-grid;
     grid-template-columns: auto auto auto;
