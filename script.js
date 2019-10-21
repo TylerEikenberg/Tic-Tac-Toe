@@ -75,7 +75,7 @@ class Color {
 }
 
 //create new color to start game with red
-let currentColor = new Color('red', 'one');
+let currentColor = new Color('red', 'One');
 //preset colors of a3 a1 c3 c1 so 'null' values aren't evaluated to being equal
 a3.style.background = 'white';
 a1.style.background = 'white';
@@ -307,5 +307,7 @@ checkWinner = () => {
         console.log(`Player Two Score: ${playerTwoWins}`);
       }
     }
+  } else if (playCount === 9) {
+    gameStatusText.innerText = 'Tie!';
   }
 };
