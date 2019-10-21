@@ -52,6 +52,11 @@ class Color {
 
 //create new color to start game with red
 let currentColor = new Color('red', 'one');
+//preset colors of a3 a1 c3 c1 so 'null' values aren't evaluated to being equal
+a3.style.background = 'white';
+a1.style.background = 'white';
+c3.style.background = 'white';
+c1.style.background = 'white';
 
 //create variable to keep track of number of plays
 let playCount = 0;
