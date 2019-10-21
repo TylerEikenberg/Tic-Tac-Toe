@@ -1,0 +1,28 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.game-page-box{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 30%;
+    width: 600px;
+    height: 600px;
+    border: 5px solid black;
+}
+.game-square{
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#a3{
+    background: null;
+}
