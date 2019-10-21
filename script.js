@@ -130,39 +130,78 @@ c1.addEventListener('click', function(e) {
 checkWinner = () => {
   //check winner only if at least 5 plays have been made
   if (playCount >= 5) {
-    //straight across a3, b3, c3
+    /*****************************
+     * //straight across a3, b3, c3
+     */
     if (a3.style.background === b3.style.background && b3.style.background === c3.style.background) {
-      console.log('straight across a3, b3, c3');
+      if (a3.style.background === 'red' && b3.style.background === 'red' && c3.style.background === 'red') {
+        console.log('PLAYER 1 WINS');
+      } else if (a3.style.background === 'blue' && b3.style.background === 'blue' && c3.style.background === 'blue') {
+        console.log('PLAYER 2 WINS');
+      }
     }
-    //straight across a2, b2, c2
+
+    /*****************************
+     * straight across a2, b2, c2
+     */
     if (a2.style.background === b2.style.background && b2.style.background === c2.style.background) {
-      console.log('straight across a2, b2, c2');
+      if (a2.style.background === 'red' && b2.style.background === 'red' && c2.style.background === 'red') {
+        console.log('PLAYER 1 WINS');
+      } else if (a2.style.background === 'blue' && b2.style.background === 'blue' && c2.style.background === 'blue') {
+        console.log('PLAYER 2 WINS');
+      }
     }
-    //straight across a1, b1, c1
+
+    /*****************************
+     * straight across a1, b1, c1
+     */
     if (a1.style.background === b1.style.background && b1.style.background === c1.style.background) {
-      console.log('straight across a1, b1, c1');
+      if (a1.style.background === 'red' && b1.style.background === 'red' && c1.style.background === 'red') {
+        console.log('PLAYER 1 WINS');
+      } else if (a1.style.background === 'blue' && b1.style.background === 'blue' && c1.style.background === 'blue') {
+        console.log('PLAYER 2 WINS');
+      }
     }
-    //straight down a3, a2, a1
+    /*****************************
+     * straight down a3, a2, a1
+     */
+
     if (a3.style.background === a2.style.background && a2.style.background === a1.style.background) {
-      console.log('straight down a3 a2 a1');
+      if (a3.style.background === 'red' && a2.style.background === 'red' && a1.style.background === 'red') {
+        console.log('PLAYER 1 WINS');
+      } else if (a3.style.background === 'blue' && a2.style.background === 'blue' && a1.style.background === 'blue') {
+        console.log('PLAYER 2 WINS');
+      }
     }
-    //straight down b3, b2, b1
+
+    /*****************************
+     * straight down b3 b2 b1
+     */
     if (b3.style.background === b2.style.background && b2.style.background === b1.style.background) {
-      console.log('straight down b3 b2 b1');
+      if (b3.style.background === 'red' && b2.style.background === 'red' && b1.style.background === 'red') {
+        console.log('PLAYER 1 WINS');
+      } else if (b3.style.background === 'blue' && b2.style.background === 'blue' && b1.style.background === 'blue') {
+        console.log('PLAYER 2 WINS');
+      }
     }
-    //straight down b3, b2, b1
-    if (b3.style.background === b2.style.background && b2.style.background === b1.style.background) {
-      console.log('straight down b3 b2 b1');
-    }
-    //straight down c3, c2, c1
+
+    /*****************************
+     * straight down c3 c2 c1
+     */
     if (c3.style.background === c2.style.background && c2.style.background === c1.style.background) {
       console.log('straight down c3 c2 c1');
     }
-    //diagonals a3, b2, c1
+
+    /*****************************
+     * diagonals a3, b2, c1
+     */
     if (a3.style.background === b2.style.background && b2.style.background === c1.style.background) {
       console.log('diagonals a3, b2, c1');
     }
-    //diagonals c3, b2, a1
+
+    /*****************************
+     * diagonals c3, b2, a1
+     */
     if (c3.style.background === b2.style.background && b2.style.background === a1.style.background) {
       console.log('diagonals c3, b2, a1');
     }
