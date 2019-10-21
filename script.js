@@ -15,11 +15,19 @@ const c2 = document.querySelector('#c2');
 const a1 = document.querySelector('#a1');
 const b1 = document.querySelector('#b1');
 const c1 = document.querySelector('#c1');
+//get div for gameSpace
 const gameSpace = document.querySelector('.game-page-box');
 
+/**
+ * Class color creates a new color
+ *
+ * Method switchColor checks what the current value of color is and switches it
+ * to the opposite color
+ */
 class Color {
-  constructor(color) {
+  constructor(color, player) {
     this.color = color;
+    this.player = player;
   }
   switchColor() {
     if (this.color === 'red') {
@@ -30,25 +38,24 @@ class Color {
       console.log(this.color);
     }
   }
+  switchPlayer() {
+    if (this.player === 'One') {
+      this.player = 'Two';
+      console.log(this.player);
+    } else if (this.player === 'Two') {
+      this.player = 'One';
+      console.log(this.player);
+    }
+  }
 }
 
-let currentColor = new Color('red');
-
-//create logic to switch between players on click
-switchPlayer = number => {
-  //if playerNumber = 1, colors only changes to blue
-  //if playerNumber = 2, colors only change to red
-  if (number === 1) {
-    return 2;
-  }
-  if (number === 2) {
-    return 1;
-  }
-};
+//create new color to start game with red
+let currentColor = new Color('red', 'one');
 
 //if you click inside game space color automatically switches
 gameSpace.addEventListener('click', function(e) {
   currentColor.switchColor();
+  currentColor.switchPlayer();
 });
 
 //add event listeners for each variable so when they are clicked their color changes
