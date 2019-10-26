@@ -83,92 +83,124 @@ c1.style.background = 'white';
 let playCount = 0;
 
 //if you click inside game space color automatically switches
-gameSpace.addEventListener('click', function(e) {
-  currentColor.switchColor();
-  currentColor.switchPlayer();
-  turn.innerHTML = `Player ${currentColor.player} Go!`;
-});
+gameSpace.addEventListener('click', function(e) {});
 
 //add event listeners for each variable so when they are clicked their color changes
 a3.addEventListener('click', function(e) {
   e.preventDefault();
+  currentColor.switchColor();
+  currentColor.switchPlayer();
+  turn.innerHTML = `Player ${currentColor.player} Go!`;
   if (a3.dataset.click === 'false') {
     a3.style.background = currentColor.color; //change background color to current players color
     playCount++; //increment play count
     checkWinner(); //check to see if there is a winner
     a3.dataset.click = 'true';
+    a3.removeAttribute('id');
   }
 });
 a2.addEventListener('click', function(e) {
   e.preventDefault();
+  currentColor.switchColor();
+  currentColor.switchPlayer();
+  turn.innerHTML = `Player ${currentColor.player} Go!`;
   if (a2.dataset.click === 'false') {
     a2.style.background = currentColor.color;
     playCount++;
     checkWinner();
     a2.dataset.click = 'true';
+    a2.removeAttribute('id');
   }
 });
 a1.addEventListener('click', function(e) {
   e.preventDefault();
+  currentColor.switchColor();
+  currentColor.switchPlayer();
+  turn.innerHTML = `Player ${currentColor.player} Go!`;
   if (a1.dataset.click === 'false') {
     a1.style.background = currentColor.color;
     playCount++;
     checkWinner();
     a1.dataset.click = 'true';
+    a1.removeAttribute('id');
   }
 });
 b3.addEventListener('click', function(e) {
   e.preventDefault();
+  currentColor.switchColor();
+  currentColor.switchPlayer();
+  turn.innerHTML = `Player ${currentColor.player} Go!`;
   if (b3.dataset.click === 'false') {
     b3.style.background = currentColor.color;
     playCount++;
     checkWinner();
     b3.dataset.click = 'true';
+    b3.removeAttribute('id');
   }
 });
 b2.addEventListener('click', function(e) {
   e.preventDefault();
+  currentColor.switchColor();
+  currentColor.switchPlayer();
+  turn.innerHTML = `Player ${currentColor.player} Go!`;
   if (b2.dataset.click === 'false') {
     b2.style.background = currentColor.color;
     playCount++;
     checkWinner();
     b2.dataset.click = 'true';
+    b2.removeAttribute('id');
   }
 });
 b1.addEventListener('click', function(e) {
   e.preventDefault();
+  currentColor.switchColor();
+  currentColor.switchPlayer();
+  turn.innerHTML = `Player ${currentColor.player} Go!`;
   if (b1.dataset.click === 'false') {
     b1.style.background = currentColor.color;
     playCount++;
     checkWinner();
     b1.dataset.click = 'true';
+    b1.removeAttribute('id');
   }
 });
 c3.addEventListener('click', function(e) {
   e.preventDefault();
+  currentColor.switchColor();
+  currentColor.switchPlayer();
+  turn.innerHTML = `Player ${currentColor.player} Go!`;
   if (c3.dataset.click === 'false') {
     c3.style.background = currentColor.color;
     playCount++;
     checkWinner();
     c3.dataset.click = 'true';
+    c3.removeAttribute('id');
   }
 });
 c2.addEventListener('click', function(e) {
   e.preventDefault();
+  currentColor.switchColor();
+  currentColor.switchPlayer();
+  turn.innerHTML = `Player ${currentColor.player} Go!`;
   if (c2.dataset.click === 'false') {
     c2.style.background = currentColor.color;
     playCount++;
     checkWinner();
     c2.dataset.click = 'true';
+    c2.removeAttribute('id');
   }
 });
 c1.addEventListener('click', function(e) {
   e.preventDefault();
+  currentColor.switchColor();
+  currentColor.switchPlayer();
+  turn.innerHTML = `Player ${currentColor.player} Go!`;
   if (c1.dataset.click === 'false') {
     c1.style.background = currentColor.color;
     playCount++;
     checkWinner();
     c1.dataset.click = 'true';
+    c1.removeAttribute('id');
   }
 });
 
