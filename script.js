@@ -21,8 +21,11 @@ const gameStatusText = document.querySelector('.game-text');
 const turn = document.querySelector('.turns');
 //get submit button
 const reset = document.querySelector('#submit');
+//create variable to keep track of number of plays
+let playCount = 0;
 
 reset.addEventListener('click', function(e) {
+  playCount = 0;
   gameStatusText.innerText = 'Tic Tac Toe';
   a3.style.background = 'whitesmoke';
   a2.style.background = 'white';
@@ -78,9 +81,6 @@ a3.style.background = 'white';
 a1.style.background = 'white';
 c3.style.background = 'white';
 c1.style.background = 'white';
-
-//create variable to keep track of number of plays
-let playCount = 0;
 
 //if you click inside game space color automatically switches
 gameSpace.addEventListener('click', function(e) {});
